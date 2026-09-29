@@ -1,0 +1,6 @@
+{
+  "name": "DROPKULTURE",
+  "description": "Premium African creator merchandise marketplace connecting fans with official drops from artists, comedians, athletes, and cultural icons.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

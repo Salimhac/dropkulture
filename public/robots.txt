@@ -1,0 +1,17 @@
+# DROPKULTURE Search Engine Crawler Directives
+User-agent: *
+Allow: /
+Disallow: /admin-dashboard
+Disallow: /admin-login
+Disallow: /salimsalim
+
+# Googlebot specific rules
+User-agent: Googlebot
+Allow: /
+Allow: /creator/*
+Allow: /product/*
+Allow: /drops
+Allow: /explore
+
+# Canonical Sitemap Location
+Sitemap: https://dropkulture.com/sitemap.xml
