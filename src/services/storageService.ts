@@ -36,7 +36,7 @@ export async function ensureStorageBuckets(): Promise<{
     return {
       success: false,
       buckets: { avatars: false, products: false, covers: false },
-      message: 'Supabase is not configured yet. Please configure VITE_SUPABASE_URL and SUPABASE_ANON_KEY.',
+      message: 'Supabase is not configured yet. Please configure VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY.',
     };
   }
 
