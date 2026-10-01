@@ -47,7 +47,7 @@ export const CATEGORIES_LIST: { id: CategoryType; name: string; description: str
     id: 'ART & CULTURE',
     name: 'ART & CULTURE',
     description: 'Screen-printed posters, cultural artifacts, and limited gallery goods.',
-    image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&q=80&w=800',
+    image: 'https://images.openai.com/static-rsc-4/7nzK-oQuM1annlaUXLqyxXO4IIkR3SxN-8GWnlT8-swoTQ9IZJnhWJAcDm5LU06oeZmao0RAz0lL5r9fE5kTmO2PPzE4C1REt2ahiZl5kjCLJEn0JwvDS5kELHPnS84CfmrRYJqYMJFKryyRobf_weriSvNXcfW_pXB0Oh4zMsk?purpose=inline',
     count: 0,
   },
 ];
