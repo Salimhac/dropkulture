@@ -130,9 +130,9 @@ export const Navbar: React.FC = () => {
             : 'bg-black/60 backdrop-blur-sm border-b border-[#1A1A1A]'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 md:h-20 flex items-center justify-between gap-2 sm:gap-4">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 md:h-20 flex items-center justify-between gap-2 sm:gap-4 min-w-0">
           {/* Left: Brand Logo in Metallic Silver & Navigation Links */}
-          <div className="flex items-center gap-3 sm:gap-4 lg:gap-10 flex-shrink-0 min-w-0">
+          <div className="flex items-center gap-3 sm:gap-4 lg:gap-10 flex-shrink min-w-0">
   <div
     id="brand-logo"
     onClick={() => handleNavClick('home')}
@@ -163,9 +163,9 @@ export const Navbar: React.FC = () => {
           </div>
 
           {/* Right: Actions & Utilities */}
-          <div className="flex items-center gap-1 sm:gap-2 md:gap-3">
+          <div className="flex items-center gap-1 sm:gap-2 md:gap-3 flex-shrink-0">
             {/* Currency Switcher */}
-            <div className="relative flex items-center text-xs font-mono-tech text-[#D9D9D9] bg-[#111111] hover:bg-[#1A1A1A] border border-[#262626] hover:border-[#C0C0C0]/40 rounded-full pl-2 pr-1 sm:px-2.5 py-1 sm:py-1.5 transition-colors flex-shrink-0">
+            <div className="hidden min-[380px]:flex relative items-center text-xs font-mono-tech text-[#D9D9D9] bg-[#111111] hover:bg-[#1A1A1A] border border-[#262626] hover:border-[#C0C0C0]/40 rounded-full pl-2 pr-1 sm:px-2.5 py-1 sm:py-1.5 transition-colors flex-shrink-0">
   <Globe className="w-3 h-3 text-[#C0C0C0] mr-1 flex-shrink-0" />
   <select
     value={currency}
