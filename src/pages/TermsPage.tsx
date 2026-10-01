@@ -181,7 +181,7 @@ export const TermsPage: React.FC = () => {
             Users are solely responsible for maintaining the confidentiality of their account credentials, passwords, and security tokens. All passwords are encrypted using industry-standard cryptographic hashing and verified via Supabase Authentication clearance.
           </p>
           <p>
-            If you notice any unauthorized access or security breach regarding your account, notify support immediately at support@dropkulture.africa.
+            If you notice any unauthorized access or security breach regarding your account, notify support immediately at mrsalimramadhan1@gmail.com.
           </p>
         </section>
 
