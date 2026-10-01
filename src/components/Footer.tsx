@@ -85,7 +85,7 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <button onClick={() => navigateTo('become-a-creator')} className="hover:text-white transition-colors">
-                  Creator FAQ & Payouts (40/60 Split)
+                  Creator FAQ & Payouts (30/70 Split)
                 </button>
               </li>
               <li>
