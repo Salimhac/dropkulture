@@ -27,84 +27,141 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
     xl: 'text-2xl sm:text-3xl',
   };
 
+  // Unique IDs so multiple instances don't clash
+  const uid = React.useId().replace(/:/g, '');
+
   return (
-    <div className={`inline-flex items-center gap-2 sm:gap-2.5 group select-none ${className}`.trim()}>
-      {/* Metallic Silver Geometric D Logo Icon */}
+    <div className={`inline-flex items-center gap-2 sm:gap-3 group select-none ${className}`.trim()}>
+      {/* Metallic Angular "D" Mark */}
       <div className={`${iconSizes[size]} relative flex-shrink-0 transition-transform duration-300 group-hover:scale-105`}>
         <svg
           viewBox="0 0 100 100"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-full h-full drop-shadow-[0_2px_12px_rgba(255,255,255,0.18)]"
+          className="w-full h-full drop-shadow-[0_2px_14px_rgba(255,255,255,0.15)]"
         >
           <defs>
-            {/* Primary Brushed Steel / Silver Gradient */}
-            <linearGradient id="silverPlate" x1="0%" y1="0%" x2="100%" y2="100%">
+            {/* Vertical brushed-silver gradient — light at top, dark at bottom */}
+            <linearGradient id={`silver-${uid}`} x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stopColor="#FDFDFD" />
+              <stop offset="18%" stopColor="#E8EAEE" />
+              <stop offset="45%" stopColor="#B8BCC4" />
+              <stop offset="70%" stopColor="#8E9299" />
+              <stop offset="100%" stopColor="#5A5D63" />
+            </linearGradient>
+
+            {/* Bright edge highlight for the top-left angular face */}
+            <linearGradient id={`highlight-${uid}`} x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="#FFFFFF" />
-              <stop offset="25%" stopColor="#E2E4E8" />
-              <stop offset="48%" stopColor="#A8ACB4" />
-              <stop offset="72%" stopColor="#D5D9E0" />
-              <stop offset="100%" stopColor="#8C9099" />
+              <stop offset="100%" stopColor="#C8CCD3" />
             </linearGradient>
 
-            {/* Top Bevel Highlight */}
-            <linearGradient id="silverHighlight" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.9" />
-              <stop offset="50%" stopColor="#E6E8EC" stopOpacity="0.6" />
-              <stop offset="100%" stopColor="#9CA0A8" stopOpacity="0.3" />
-            </linearGradient>
-
-            {/* Inner Darker Steel Shadow */}
-            <linearGradient id="steelShadow" x1="0%" y1="100%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#5B5F66" />
-              <stop offset="50%" stopColor="#7E828A" />
-              <stop offset="100%" stopColor="#BAC0CA" />
-            </linearGradient>
-
-            {/* Droplet Highlight */}
-            <linearGradient id="dropletGradient" x1="50%" y1="0%" x2="50%" y2="100%">
+            {/* Droplet gradient — bright top, silver bottom */}
+            <linearGradient id={`drop-${uid}`} x1="0%" y1="0%" x2="0%" y2="100%">
               <stop offset="0%" stopColor="#FFFFFF" />
-              <stop offset="50%" stopColor="#E0E3E8" />
-              <stop offset="100%" stopColor="#9EA3AC" />
+              <stop offset="55%" stopColor="#DCDFE4" />
+              <stop offset="100%" stopColor="#9AA0A8" />
             </linearGradient>
+
+            {/* Droplet inner crescent highlight */}
+            <radialGradient id={`dropShine-${uid}`} cx="35%" cy="60%" r="55%">
+              <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.95" />
+              <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0" />
+            </radialGradient>
           </defs>
 
-          {/* Base Geometric 'D' Shape with cutout for the droplet */}
+          {/*
+            Angular "D":
+            - Left side: straight vertical bar
+            - Top-left: angular cut (diagonal notch)
+            - Right side: thick curved bowl
+            - Bottom-left: sharp wedge point extending left
+          */}
           <path
-            d="M20 18 L60 18 C78 18 90 29 90 50 C90 71 78 82 60 82 L20 82 L20 54 L34 54 L34 70 L58 70 C69 70 76 63 76 50 C76 37 69 30 58 30 L34 30 L34 40 L20 40 Z"
-            fill="url(#silverPlate)"
+            d="
+              M 14 22
+              L 52 22
+              C 82 22 92 40 92 55
+              C 92 74 80 88 52 88
+              L 30 88
+              L 44 74
+              L 52 74
+              C 68 74 76 66 76 55
+              C 76 44 68 36 52 36
+              L 26 36
+              L 14 22
+              Z
+            "
+            fill={`url(#silver-${uid})`}
           />
 
-          {/* Upper Wing / Bevel Cut */}
+          {/* Bright top-left angular face */}
           <path
-            d="M10 28 L20 18 L60 18 C75 18 85 27 88 44 L78 40 C75 32 68 28 58 28 L30 28 L20 38 Z"
-            fill="url(#silverHighlight)"
-            opacity="0.8"
+            d="
+              M 14 22
+              L 52 22
+              C 68 22 80 27 86 38
+              L 76 40
+              C 71 33 62 30 52 30
+              L 24 30
+              L 14 22
+              Z
+            "
+            fill={`url(#highlight-${uid})`}
+            opacity="0.9"
           />
 
-          {/* Lower Shadow Edge */}
+          {/* Sharp bottom-left wedge */}
           <path
-            d="M20 74 L20 82 L60 82 C78 82 90 71 90 50 C90 48 89.8 46 89.5 44 C88 66 76 74 58 74 Z"
-            fill="url(#steelShadow)"
-            opacity="0.6"
+            d="
+              M 30 88
+              L 44 74
+              L 40 60
+              L 26 74
+              Z
+            "
+            fill={`url(#silver-${uid})`}
+            opacity="0.85"
           />
 
-          {/* Droplet Icon in Center Void */}
-          {/* Sits at (50, 48) inside the D */}
+          {/* Droplet — sharp point up, round bottom, centered in counter */}
           <path
-            d="M50 36 C50 36 43 45 43 51 C43 55.4 46.1 59 50 59 C53.9 59 57 55.4 57 51 C57 45 50 36 50 36 Z"
-            fill="url(#dropletGradient)"
+            d="
+              M 54 42
+              C 54 42 47 51 47 58
+              C 47 62.4 50.1 66 54 66
+              C 57.9 66 61 62.4 61 58
+              C 61 51 54 42 54 42
+              Z
+            "
+            fill={`url(#drop-${uid})`}
+          />
+
+          {/* Droplet crescent highlight */}
+          <path
+            d="
+              M 54 46
+              C 54 46 50 52 50 57
+              C 50 60 51.5 62 54 62
+              C 52 60 51.5 58 51.5 56.5
+              C 51.5 52 54 46 54 46
+              Z
+            "
+            fill={`url(#dropShine-${uid})`}
           />
         </svg>
       </div>
 
-      {/* Wordmark */}
+      {/* Wordmark — all-caps, wide-tracking, techno display font */}
       {showWordmark && (
         <span
-          className={`font-display font-extrabold tracking-tight text-white ${textSizes[size]} ${wordmarkClassName}`}
-          style={{ letterSpacing: '-0.03em' }}
+          className={`font-display font-extrabold uppercase text-white ${textSizes[size]} ${wordmarkClassName}`}
+          style={{
+            letterSpacing: '0.18em',
+            fontStretch: 'expanded',
+          }}
         >
-          Drop<span className="text-[#C0C0C0]">Kulture</span>
+          DROP<span className="text-[#C0C0C0]">KULTURE</span>
         </span>
       )}
     </div>

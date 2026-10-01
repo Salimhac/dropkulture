@@ -1,5 +1,20 @@
 @import "tailwindcss";
 
+/* ============================================================
+   Tailwind v4 Theme Tokens
+   Registers font families as utilities: font-display, font-sans,
+   font-syne, font-grotesk
+   ============================================================ */
+@theme {
+  --font-display: "Michroma", "Orbitron", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-syne: "Syne", sans-serif;
+  --font-grotesk: "Space Grotesk", sans-serif;
+}
+
+/* ============================================================
+   Base layer — global resets and brand defaults
+   ============================================================ */
 @layer base {
   html, body {
     overflow-x: hidden;
@@ -17,9 +32,16 @@
     min-height: 100vh;
   }
 
-  h1, h2, h3, .font-display {
+  /* Headings use Syne — brand display font for editorial sections */
+  h1, h2, h3 {
     font-family: 'Syne', sans-serif;
     letter-spacing: -0.025em;
+  }
+
+  /* Michroma — reserved for the DROPKULTURE wordmark & techno UI */
+  .font-display {
+    font-family: 'Michroma', 'Orbitron', ui-sans-serif, system-ui, sans-serif;
+    letter-spacing: 0.05em;
   }
 
   .font-mono-tech {
@@ -34,7 +56,9 @@
   }
 }
 
-/* Safe area insets for mobile notched devices */
+/* ============================================================
+   Safe area insets for mobile notched devices
+   ============================================================ */
 .safe-area-bottom {
   padding-bottom: max(0.5rem, env(safe-area-inset-bottom, 0.5rem));
 }
@@ -43,7 +67,9 @@
   padding-top: max(0.5rem, env(safe-area-inset-top, 0.5rem));
 }
 
-/* Custom refined luxury scrollbar */
+/* ============================================================
+   Custom refined luxury scrollbar
+   ============================================================ */
 ::-webkit-scrollbar {
   width: 5px;
   height: 5px;
@@ -62,7 +88,9 @@
   background: #525252;
 }
 
-/* Metallic and Luxury Surfaces */
+/* ============================================================
+   Metallic and Luxury Surfaces
+   ============================================================ */
 .bg-pure-black {
   background-color: #000000;
 }
@@ -84,17 +112,21 @@
   box-shadow: 0 0 20px rgba(192, 192, 192, 0.12);
 }
 
-/* Brushed Steel & Metallic Gradients */
+/* ============================================================
+   Brushed Steel & Metallic Gradients
+   ============================================================ */
 .text-metallic-silver {
   background: linear-gradient(135deg, #FFFFFF 0%, #E6E6E6 35%, #C0C0C0 70%, #999999 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .text-steel-highlight {
   background: linear-gradient(90deg, #A8ACB4 0%, #FFFFFF 50%, #C0C0C0 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .bg-brushed-steel {
@@ -105,7 +137,9 @@
   background: radial-gradient(ellipse at top, rgba(255, 255, 255, 0.12) 0%, rgba(0, 0, 0, 0) 70%);
 }
 
-/* Primary and Secondary Buttons */
+/* ============================================================
+   Primary and Secondary Buttons
+   ============================================================ */
 .btn-primary-metallic {
   background: linear-gradient(135deg, #E6E6E6 0%, #FFFFFF 45%, #C0C0C0 100%);
   color: #000000;
@@ -133,7 +167,9 @@
   transform: translateY(-1px);
 }
 
-/* Luxury Glass Effects */
+/* ============================================================
+   Luxury Glass Effects
+   ============================================================ */
 .glass-panel {
   background: rgba(17, 17, 17, 0.85);
   backdrop-filter: blur(20px);
@@ -148,7 +184,9 @@
   border-bottom: 1px solid rgba(192, 192, 192, 0.1);
 }
 
-/* Shimmer animation */
+/* ============================================================
+   Animations — Shimmer & Marquee
+   ============================================================ */
 @keyframes shimmer {
   0% {
     background-position: -200% 0;
