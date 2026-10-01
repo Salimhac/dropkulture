@@ -150,7 +150,7 @@ export const TermsPage: React.FC = () => {
             Customer Orders, Payments & Fulfillment
           </h3>
           <p>
-            All consumer orders placed through DROPKULTURE are subject to product availability and payment verification. Payments are processed securely via Paystack, supporting Safaricom M-Pesa Express, major credit/debit cards (Visa, MasterCard), and Apple Pay.
+            All consumer orders placed through DROPKULTURE are subject to product availability and payment verification. Payments are processed securely via Paystack, supporting Safaricom M-Pesa and Airtel Money.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
             <div className="p-3.5 rounded-xl bg-[#111111] border border-[#222222]">
