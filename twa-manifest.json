@@ -2,7 +2,7 @@
   "packageId": "app.vercel.dropkulture.twa",
   "host": "dropkulture.vercel.app",
   "name": "DropKulture",
-  "launcherName": "DropK",
+  "launcherName": "DropKulture",
   "display": "standalone",
   "themeColor": "#000000",
   "themeColorDark": "#000000",

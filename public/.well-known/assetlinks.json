@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "app.vercel.dropkulture.twa",
+      "sha256_cert_fingerprints": [
+        "13:09:47:88:09:0A:D6:AE:57:91:33:11:CA:48:8F:D4:BD:BE:FF:A5:E2:9E:4B:9B:89:CD:6E:98:A1:E6:A7:DF"
+      ]
+    }
+  }
+]
