@@ -20,8 +20,8 @@
     "path": "D:\\DropKulture\\android.keystore",
     "alias": "android"
   },
-  "appVersionName": "4",
-  "appVersionCode": 4,
+  "appVersionName": "6",
+  "appVersionCode": 6,
   "shortcuts": [],
   "generatorApp": "bubblewrap-cli",
   "webManifestUrl": "https://www.dropkulture.co.ke/manifest.json",
@@ -46,5 +46,5 @@
     "standalone",
     "minimal-ui"
   ],
-  "appVersion": "4"
+  "appVersion": "6"
 }
