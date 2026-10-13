@@ -1,6 +1,6 @@
 {
   "packageId": "app.vercel.dropkulture.twa",
-  "host": "dropkulture.vercel.app",
+  "host": "www.dropkulture.co.ke",
   "name": "DropKulture",
   "launcherName": "DropKulture",
   "display": "standalone",
@@ -13,18 +13,18 @@
   "backgroundColor": "#000000",
   "enableNotifications": true,
   "startUrl": "/",
-  "iconUrl": "https://dropkulture.vercel.app/dropkulture-logo.jpg",
-  "maskableIconUrl": "https://dropkulture.vercel.app/dropkulture-logo.jpg",
+  "iconUrl": "https://www.dropkulture.co.ke/dropkulture-logo.jpg",
+  "maskableIconUrl": "https://www.dropkulture.co.ke/dropkulture-logo.jpg",
   "splashScreenFadeOutDuration": 300,
   "signingKey": {
     "path": "D:\\DropKulture\\android.keystore",
     "alias": "android"
   },
-  "appVersionName": "2",
-  "appVersionCode": 2,
+  "appVersionName": "4",
+  "appVersionCode": 4,
   "shortcuts": [],
   "generatorApp": "bubblewrap-cli",
-  "webManifestUrl": "https://dropkulture.vercel.app/manifest.json",
+  "webManifestUrl": "https://www.dropkulture.co.ke/manifest.json",
   "fallbackType": "customtabs",
   "features": {},
   "alphaDependencies": {
@@ -33,7 +33,7 @@
   "enableSiteSettingsShortcut": true,
   "isChromeOSOnly": false,
   "isMetaQuest": false,
-  "fullScopeUrl": "https://dropkulture.vercel.app/",
+  "fullScopeUrl": "https://www.dropkulture.co.ke/",
   "minSdkVersion": 21,
   "orientation": "portrait-primary",
   "fingerprints": [],
@@ -46,5 +46,5 @@
     "standalone",
     "minimal-ui"
   ],
-  "appVersion": "2"
+  "appVersion": "4"
 }
